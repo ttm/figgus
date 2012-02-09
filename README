@@ -10,6 +10,25 @@ Or try our IRC:
 #labmacambira @ irc.freenode.net
 
 
+------
+For now, FIGGUS is structured as follows:
+
+1) Sonic Material
+class UnitGrain is a sonic grain/event
+class Sequence takes a sequence of UnitGrain classes in a specific order
+
+2) Permutations
+class Permutation is a permutation with some facilities for displaying notation and alterations
+class PermutationPattern is a permutation with some more info, like periodicity
+
+3) Resulting Patterns
+class Pattern is where the grains and the permutations entangle and where the synthesis come to life
+
+4) Utils
+class Tables reads tables for lookup from directory tables/
+class IOUtils is dedicated to easy pattern IOs
+
+
 
 
 
