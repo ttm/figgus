@@ -3,7 +3,8 @@ ToDo:
 * Fazer sair som com o PatternPlayer
 * Arrumar a classe Tables para nao precisar do NumPy
 * Inserir estruturas de permutacao e grupos algebricos
-
+* Agilizar a escolha de outros timbres alem da senoide
+* Agilizar outras formas de onda
 
 * Fazer versao soh no NumPy
 * Fazer versao com audiola+numpy

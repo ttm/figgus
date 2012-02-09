@@ -87,45 +87,78 @@ class Pattern:
 		SI= unit.freq * self.N / self.SR
 		ap=0
 		for i in xrange(int(unit.duration*self.SR)):
-		    sonic_vector.append(unit.intensidade*Tables.sin_cycle[int(ap)])
+		    sonic_vector.append(unit.intensidade*Tables.sin1024[int(ap)])
 		    ap = (SI + ap)%self.N
 	self.sonic_vector=sonic_vector
 
 class Tables:
     f=open("tables/sin1024.txt","r")
-    sin1024=f.read().split(",")
+    sin1024=[float(i) for i in f.read().split(",")]
     f.close()
     
     f=open("tables/sin2048.txt","r")
-    sin2048=f.read().split(",")
+    sin2048=[float(i) for i in f.read().split(",")]
     f.close()
     
     f=open("tables/saw1024.txt","r")
-    saw1024=f.read().split(",")
+    saw1024=[float(i) for i in f.read().split(",")]
     f.close()
     
     f=open("tables/saw2048.txt","r")
-    saw2048=f.read().split(",")
+    saw2048=[float(i) for i in f.read().split(",")]
     f.close()
     
     f=open("tables/wnoise1024.txt","r")
-    wnoise1024=f.read().split(",")
+    wnoise1024=[float(i) for i in f.read().split(",")]
     f.close()
     
     f=open("tables/wnoise2048.txt","r")
-    wnoise2048=f.read().split(",")
+    wnoise2048=[float(i) for i in f.read().split(",")]
     f.close()
 
 import wave, struct
 #class PatternPlayer(Pattern):
-class PatternPlayer():
+class IOUtils:
+    def recordPattern(self,filename,pattern):
+	self.recordFile(filename,pattern.sonic_vector,pattern.SR)
 	
-    def recordFile(self):
-	sound = wave.open('sinusoid.wav','w')
-	sound.setnchannels(1) # Mono
-	sound.setframerate(44100) # 44.1k
-	# Numero de bytes do arquivo, estamos pensando em 16 bits, 2 bytes, certo?!
-	sound.setsampwidth(2) # 16bit/sample (2 bytes)
-	sonic_vector=((n.sin(n.linspace(0,5*220*(2*n.pi),44100*5)))*.5    )*(2**16)
-	sound.writeframes(struct.pack('h'*44100*5,*[int(i) for i in sonic_vector]))
+    def recordFile(self,filename="sound.wav",sonic_vector=[], samplerate=44100):
+	sound = wave.open(filename,'w')
+	sound.setframerate(samplerate)
+	sound.setnchannels(1) # Always Mono
+	sound.setsampwidth(2) # Always 16bit/sample (2 bytes)
+
+	sonic_vector=self.boundVector(sonic_vector)
+
+	sonic_vector=[i*(2**15-1) for i in sonic_vector] #signed 16 bit
+	sound.writeframes(struct.pack('h'*len(sonic_vector),*[int(i) for i in sonic_vector]))
 	sound.close()
+
+    def boundVector(self,vector):
+	"""Bound vector in the [-1,1] interval"""
+	svmin=min(vector)
+	svmax=max(vector)
+	ambit=svmax-svmin
+	if svmax>1 or svmin<-1:
+	    if svmax-svmin > 2:
+		i=0
+		for sample in vector:
+		    new_sample=(sample-svmin)/ambit # results in [0,1]
+		    new_sample=new_sample*2-1 # results in [-1,1]
+		    vector[i]=new_sample
+		    i+=1
+	    elif svmax > 1:
+		offset=svmax-ambit/2
+		i=0
+		for sample in vector:
+		    new_sample=sample - offset
+		    vector[i]=new_sample
+		    i+=1
+	    elif svmin < -1:
+		offset=-svmin -ambit/2
+		i=0
+		for sample in vector:
+		    new_sample=sample + offset
+		    vector[i] = new_sample
+		    i+=1
+	return vector
