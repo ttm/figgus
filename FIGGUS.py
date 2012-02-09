@@ -1,4 +1,7 @@
 ###### THE BASIC SEQUENCE: ######
+
+from tables import *
+
 class UnitGrain:
 	"""Sonic minimum unit, be it a grain or a note
 	
