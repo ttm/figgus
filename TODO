@@ -1,0 +1,11 @@
+ToDo:
+* Debugar ateh o Pattern() gerar um sonic_vector condizente
+* Fazer sair som com o PatternPlayer
+* Arrumar a classe Tables para nao precisar do NumPy
+* Inserir estruturas de permutacao e grupos algebricos
+
+
+* Fazer versao soh no NumPy
+* Fazer versao com audiola+numpy
+* Fazer versao com Pyo
+* Fazer versao com ChucK 
