@@ -90,20 +90,36 @@ class Pattern:
 		    sonic_vector.append(unit.intensidade*Tables.sin_cycle[int(ap)])
 		    ap = (SI + ap)%self.N
 	self.sonic_vector=sonic_vector
-	    
-import numpy as n
 
 class Tables:
-    sin_cycle=n.sin(n.linspace(0,n.pi*2,1024,endpoint=False))
-    ramp_cycle=n.linspace(-1,1,1024)
-    tri_cycle=n.hstack((ramp_cycle[::2],ramp_cycle[-1:1:2]))
-    white_noise=n.random.random(1024)*2-1
+    f=open("tables/sin1024.txt","r")
+    sin1024=f.read().split(",")
+    f.close()
+    
+    f=open("tables/sin2048.txt","r")
+    sin2048=f.read().split(",")
+    f.close()
+    
+    f=open("tables/saw1024.txt","r")
+    saw1024=f.read().split(",")
+    f.close()
+    
+    f=open("tables/saw2048.txt","r")
+    saw2048=f.read().split(",")
+    f.close()
+    
+    f=open("tables/wnoise1024.txt","r")
+    wnoise1024=f.read().split(",")
+    f.close()
+    
+    f=open("tables/wnoise2048.txt","r")
+    wnoise2048=f.read().split(",")
+    f.close()
 
 import wave, struct
 #class PatternPlayer(Pattern):
 class PatternPlayer():
 	
-        
     def recordFile(self):
 	sound = wave.open('sinusoid.wav','w')
 	sound.setnchannels(1) # Mono
