@@ -6,7 +6,7 @@ class UnitGrain:
 	(Gabor and Roads)"""
 	def __init__(self,duration=1,freq=220,timbre=0,intensidade=1,fades=0):
         	self.duration=duration
-	        self.freq=0
+	        self.freq=freq
 	        self.timbre=timbre
 	        self.intensidade=intensidade
 	        self.fades=fades
@@ -58,13 +58,12 @@ class Pattern:
     permutation_pattern : class
       An instantiated FIGGUS PermutationPattern class"""
     def __init__(self, iterations=1, sequence=Sequence(), permutation_pattern=PermutationPattern()):
-        unit_count=sequence.unit_count * iterations
+        self.unit_count=sequence.unit_count * iterations
         self.sequence=sequence
         self.permutation_pattern=permutation_pattern
         
         pattern=[sequence.active_grains]
         stage=sequence.active_grains
-        i=1
 	for i in xrange(iterations):
 	    if i%permutation_pattern.period == 0:
 		stage = [stage[i-1] for i in permutation_pattern.one_line]
@@ -78,7 +77,7 @@ class Pattern:
 	self.SR=44100
 	self.N=1024 #utilizado na classe Tables
 
-    def sythesizeSonicVectors(self):
+    def synthesizeSonicVectors(self):
 	sonic_vector=[]
 	
 	for compass in self.pattern:
@@ -114,4 +113,3 @@ class PatternPlayer():
 	sonic_vector=((n.sin(n.linspace(0,5*220*(2*n.pi),44100*5)))*.5    )*(2**16)
 	sound.writeframes(struct.pack('h'*44100*5,*[int(i) for i in sonic_vector]))
 	sound.close()
-
