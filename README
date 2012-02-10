@@ -2,6 +2,8 @@
 
 This is the rewriting of the old 'FIGGS': Finite Groups in Granular and Unit Synthesis
 
+Install it with the usual 'python setup.py install'
+
 See files and TODO for now, or write us:
 labmacambira@teia.org.br
 renato.fabbri@gmail.com
