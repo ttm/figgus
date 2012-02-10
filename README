@@ -35,8 +35,8 @@ some more elaborated Finite Group stuff should come soon, probrably via gap.
 # USAGE:
 import figgus as f
 
-p=f.Pattern() # Pattern uses standard sonic units
-p.synthesizeSonicVectors() #  # makes the sonic vector
+p=f.Pattern() # Pattern uses standard 1s 220Hz sonic units and (123) == [231] permutations
+p.synthesizeSonicVectors() #  # makes the sonic vector and stores it in p.sonic_vector
 
 io=f.IOUtils() # instantiates a IO class
 io.recordPattern("som.wav",p) # Make .wav from pattern p please :-)
