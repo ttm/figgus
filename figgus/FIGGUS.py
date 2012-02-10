@@ -42,6 +42,7 @@ class Permutation:
     cycle=(1,2,5)(3,4)"""
     def __init__(self, one_line=(2,3,1)):
         self.one_line = one_line
+        self.size=len(one_line)
         
 
 class PermutationPattern(Permutation):
@@ -60,16 +61,23 @@ class Pattern:
       An instantiated FIGGUS Sequence class
     permutation_pattern : class
       An instantiated FIGGUS PermutationPattern class"""
-    def __init__(self, iterations=1, sequence=Sequence(), permutation_pattern=PermutationPattern()):
+    def __init__(self, sequence=Sequence(), permutation_pattern=PermutationPattern(),iterations=1):
         self.unit_count=sequence.unit_count * iterations
         self.sequence=sequence
         self.permutation_pattern=permutation_pattern
+        
+	self.tail=sequence.unit_count - permutation_pattern.size
+	if sequence.unit_count > permutation_pattern.size:
+	    self.tail_elements = range(permutation_pattern.size,sequence.unit_count)
+	else:
+	    self.tail_elements = []
         
         pattern=[sequence.active_grains]
         stage=sequence.active_grains
 	for i in xrange(iterations):
 	    if i%permutation_pattern.period == 0:
 		stage = [stage[i-1] for i in permutation_pattern.one_line]
+		stage += self.tail_elements
 		pattern.append(stage)
 	    else:
 		pattern.append(stage)
