@@ -25,10 +25,10 @@ class PermutationPattern is a permutation with some more info, like periodicity
 class Pattern is where the grains and the permutations entangle and where the synthesis come to life
 
 4) Utils
-class Tables reads tables for lookup from directory tables/
-class IOUtils is dedicated to easy pattern IOs
+class Tables (in tables.py) reads tables for lookup from directory tables/
+class IOUtils is dedicated to easy pattern and vectors IOs
 
-
+some more elaborated Finite Group stuff should come soon, probrably via gap.
 
 
 
