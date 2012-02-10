@@ -31,12 +31,25 @@ class Tables (in tables.py) reads tables for lookup from directory tables/
 class IOUtils is dedicated to easy pattern and vectors IOs
 
 some more elaborated Finite Group stuff should come soon, probrably via gap.
+############
+# USAGE:
+import figgus as f
 
+p=f.Pattern() # Pattern uses standard sonic units
+p.synthesizeSonicVectors() #  # makes the sonic vector
 
+io=f.IOUtils() # instantiates a IO class
+io.recordPattern("som.wav",p) # Make .wav from pattern p please :-)
 
 
 """
 FIGGS ancient code:
 http://www.estudiolivre.org/el-gallery_view.php?arquivoId=7959
 """
-_o_o_ oOo _o_o_
+
+
+=== /\/\/\/\/\ _o_o_ oOo _o_o_ /\/\/\/\/\ ===
+
+
+
+
