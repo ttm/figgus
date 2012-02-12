@@ -74,9 +74,9 @@ class Pattern:
         
         pattern=[sequence.active_grains]
         stage=sequence.active_grains
-	for i in xrange(iterations):
+	for i in xrange(iterations-1):
 	    if i%permutation_pattern.period == 0:
-		stage = [stage[i-1] for i in permutation_pattern.one_line]
+		stage = [stage[j-1] for j in permutation_pattern.one_line]
 		stage += self.tail_elements
 		pattern.append(stage)
 	    else:
