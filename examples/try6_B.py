@@ -47,4 +47,4 @@ sound += [(i*j)*.32 for i,j,k in zip(sound1,sound2B,sound2C)]
 sound += (2*sound)
 
 io=f.IOUtils()
-io.recordFile("som.wav",sound)
+io.recordFile(sound)
