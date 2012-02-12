@@ -40,6 +40,7 @@ def doCompass(durs,freqs,perms,ncomps):
 #sound+=doCompass(".2 + 0.05*i","10000 - 1000*(i+1)")
 semitom = "2**(1/12.)" # multiplication factor, 12 semintons gives an octave: 2 doubles de freqs
 sound+=doCompass(".5","200*("+semitom+")**(3*i)",(2,3,1),3)
+sound+=doCompass(".5","200*("+semitom+")**(3*i)",(2,3,1),3)
 
 io=f.IOUtils()
 io.recordFile("som.wav",sound)
