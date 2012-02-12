@@ -134,6 +134,7 @@ class IOUtils:
 		SV.extend((i,j))
 	    sound.writeframes(struct.pack('h'*len(SV),*SV))
 	    sound.close()
+	print 'gravado o arquivo ' + filename
 
 
     def boundVector(self,vector):
