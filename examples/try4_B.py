@@ -41,4 +41,4 @@ sound2+=doCompass(dur,"100*("+semitom+")**(3*i)",(3,1,2),1)
 sound += 2*(3*sound2)
 
 io=f.IOUtils()
-io.recordFile("som.wav",sound)
+io.recordFile(sound)# records to 'sound.wav'
