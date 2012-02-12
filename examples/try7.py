@@ -89,5 +89,6 @@ right+=left3
 ######
 
 io=f.IOUtils()
-io.recordFile("left.wav",left*2)
-io.recordFile("right.wav",right*2)
+#io.recordFile(left,[],"left.wav") #records a mono 16 bit
+#io.recordFile(right,[],"right.wav") #records a mono 16 bit
+io.recordFile(left,right,"both.wav") #records a mono 16 bit

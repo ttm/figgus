@@ -109,17 +109,32 @@ class IOUtils:
     def recordPattern(self,filename,pattern):
 	self.recordFile(filename,pattern.sonic_vector,pattern.SR)
 	
-    def recordFile(self,filename="sound.wav",sonic_vector=[], samplerate=44100):
+    def recordFile(self,sonic_vector=[], sonic_vector2=[], filename="sound.wav", samplerate=44100):
 	sound = wave.open(filename,'w')
 	sound.setframerate(samplerate)
-	sound.setnchannels(1) # Always Mono
+
 	sound.setsampwidth(2) # Always 16bit/sample (2 bytes)
+	if not sonic_vector2:
+	    sound.setnchannels(1) # Mono
+	    sonic_vector=self.boundVector(sonic_vector)
 
-	sonic_vector=self.boundVector(sonic_vector)
+	    sonic_vector=[i*(2**15-1) for i in sonic_vector] #signed 16 bit
+	    sound.writeframes(struct.pack('h'*len(sonic_vector),*[int(i) for i in sonic_vector]))
+	    sound.close()
+	else:
 
-	sonic_vector=[i*(2**15-1) for i in sonic_vector] #signed 16 bit
-	sound.writeframes(struct.pack('h'*len(sonic_vector),*[int(i) for i in sonic_vector]))
-	sound.close()
+	    sound.setnchannels(2) # Mono
+	    sonic_vector=self.boundVector(sonic_vector)
+	    sonic_vector2=self.boundVector(sonic_vector2)
+
+	    sonic_vector=[i*(2**15-1) for i in sonic_vector] #signed 16 bit
+	    sonic_vector2=[i*(2**15-1) for i in sonic_vector2] #signed 16 bit
+	    SV=[]
+	    for i,j in zip(sonic_vector,sonic_vector2):
+		SV.extend((i,j))
+	    sound.writeframes(struct.pack('h'*len(SV),*SV))
+	    sound.close()
+
 
     def boundVector(self,vector):
 	"""Bound vector in the [-1,1] interval"""
