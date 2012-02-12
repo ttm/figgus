@@ -23,21 +23,26 @@ s=f.Sequence(grains)
 sound=[]
 
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
-def doCompass():
+def doCompass(durs,freqs,perms,ncomps):
     for i in xrange(n):
-	s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-	s.ordered_unit_grains[i].duration=.2 + 0.05*i
-	print 100*(i+1)
+	s.ordered_unit_grains[i].freq=eval(freqs)
+	s.ordered_unit_grains[i].duration=eval(durs)
+	print 1*(i+1)
 	
-    s.ordered_unit_grains[1].freq=100
-    s.ordered_unit_grains[3].freq=500
+    #s.ordered_unit_grains[1].freq=100
+    #s.ordered_unit_grains[3].freq=500
 	
     #pp=PermutationPattern()
-    p=f.Pattern(s,f.PermutationPattern(),8)
+    p=f.Pattern(s,f.PermutationPattern(),ncomps)
     p.synthesizeSonicVectors()
     return p.sonic_vector
 
-sound+=doCompass()
+#sound+=doCompass(".2 + 0.05*i","10000 - 1000*(i+1)")
+semitom = "2**(1/12.)" # multiplication factor, 12 semintons gives an octave: 2 doubles de freqs
+sound+=doCompass(".5","200*("+semitom+")**(3*i)",(2,3,1),3)
+
+io=f.IOUtils()
+io.recordFile("som.wav",sound)
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
 """for i in xrange(n):
