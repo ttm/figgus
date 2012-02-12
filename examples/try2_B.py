@@ -216,6 +216,6 @@ sound+=p.sonic_vector
 
 
 io=f.IOUtils()
-io.recordFile("som.wav",sound)
+io.recordFile(sound)
 
 print "== Ouca que 'o triangulo gira e existe uma bola do lado' (nome da peca) =="

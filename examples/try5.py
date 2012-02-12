@@ -30,4 +30,4 @@ sound += (3*silencio)
 sound += 2*(3*sound)
 
 io=f.IOUtils()
-io.recordFile("som.wav",sound)
+io.recordFile(sound) # grevado o arquivo sound.wav

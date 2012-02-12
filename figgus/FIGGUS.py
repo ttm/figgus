@@ -101,13 +101,13 @@ class Pattern:
 		    sonic_vector.append(unit.intensidade*Tables.sin1024[int(ap)])
 		    ap = (SI + ap)%self.N
 	self.sonic_vector=sonic_vector
+	self.sonic_vector2=[] # Always MONO for now.
 
 
 import wave, struct
-#class PatternPlayer(Pattern):
 class IOUtils:
     def recordPattern(self,filename,pattern):
-	self.recordFile(filename,pattern.sonic_vector,pattern.SR)
+	self.recordFile(pattern.sonic_vector,[],"sound.wav",pattern.SR)
 	
     def recordFile(self,sonic_vector=[], sonic_vector2=[], filename="sound.wav", samplerate=44100):
 	sound = wave.open(filename,'w')

@@ -55,4 +55,4 @@ for i,j in zip(sound1,sound2):
 sound*=2
 
 io=f.IOUtils()
-io.recordFile("som.wav",sound)
+io.recordFile(sound) # grava no audio.wav

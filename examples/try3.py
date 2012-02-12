@@ -43,7 +43,7 @@ sound+=doCompass(".5","200*("+semitom+")**(3*i)",(2,3,1),3)
 sound+=doCompass(".5","200*("+semitom+")**(3*i)",(2,3,1),3)
 
 io=f.IOUtils()
-io.recordFile("som.wav",sound)
+io.recordFile(sound)
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
 """for i in xrange(n):
