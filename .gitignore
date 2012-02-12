@@ -1,1 +1,7 @@
 *~
+*pyc
+*wav
+build
+dist
+*egg-info
+*kate-swp
