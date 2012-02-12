@@ -18,7 +18,7 @@ os.system('mv both.wav ep-Projeto_Solvente/07-Benzina.wav')
 print "gravado o arquivo ep-Projeto_Solvente/07-Benzina.wav"
 
 execfile("examples/try4_B.py")
-os.system('mv audio.wav ep-Projeto_Solvente/08-Cloroformio.wav')
+os.system('mv sound.wav ep-Projeto_Solvente/08-Cloroformio.wav')
 print "gravado o arquivo ep-Projeto_Solvente/08-Cloroformio.wav"
 
 #execfile("examples/try4_B.py")
