@@ -30,5 +30,5 @@ os.system('mv sound.wav ep-Projeto_Solvente/09-Cloroformio.wav')
 print "gravado o arquivo ep-Projeto_Solvente/09-Cloroformio.wav"
 
 execfile("examples/try5.py")
-os.system('mv sound.wav ep-Projeto_Solvente/10-agua.wav')
-print "gravado o arquivo ep-Projeto_Solvente/10-agua.wav"
+os.system('mv sound.wav ep-Projeto_Solvente/10-Agua.wav')
+print "gravado o arquivo ep-Projeto_Solvente/10-Agua.wav"
