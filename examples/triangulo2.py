@@ -29,7 +29,7 @@ sound1=doCompass(dur,"200*("+semitom+")**(3*i)",(2,3,1),12)
 io=f.IOUtils()
 io.recordFile(sound1) #records a mono 16 bit
 
-print "triangulo gira em decrescente"
+print "\n== triangulo gira em decrescente ==\n"
 
 """
 sound1B=doCompass(dur,"4*200*("+semitom+")**(3*i)",(2,3,1),3)
