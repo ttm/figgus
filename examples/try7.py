@@ -88,6 +88,10 @@ right+=left3
 
 ######
 
+
+left*=2
+right*=2
+
 io=f.IOUtils()
 #io.recordFile(left,[],"left.wav") #records a mono 16 bit
 #io.recordFile(right,[],"right.wav") #records a mono 16 bit
