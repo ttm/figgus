@@ -15,22 +15,29 @@ def doCompass(durs,freqs,perms,ncomps):
     return p.sonic_vector
 
 semitom = "2**(1/12.)" # multiplication factor, 12 semintons gives an octave: 2 doubles de freqs
-dur=".3"
+#dur=".3"
+dur=".5"
 sound=[]
 
 ######
 
 
-sounda=doCompass(dur,"200*("+semitom+")**(4*i)",(3,1,2),3*4)
-soundb=doCompass(dur,"200*("+semitom+")**(4*i)",(2,3,1),3*4)
-sound = sounda+soundb
+sounda=doCompass(dur,"200*("+semitom+")**(3*i)",(3,1,2),3*4)
+soundb=doCompass(dur,"200*2*("+semitom+")**(3*i)",(2,3,1),3*4)
+sound = sounda+[(i+j)*.5 for i,j in zip(sounda,soundb)]
 
+dur=".3"
 sounda1=doCompass(dur,"100*("+semitom+")**(3*i)",(3,1,2),3*4)
 soundb1=doCompass(dur,"200*(2/3.)*("+semitom+")**(3*i)",(2,3,1),3*4)
 stemp = [(i+j)*.5 for i,j in zip(sounda1,soundb1)]
 sound += stemp
 
 sound += sounda1+soundb1
+
+
+sounda=doCompass(dur,"200*("+semitom+")**(3*i)",(3,1,2),3*4)
+soundb=doCompass(dur,"200*("+semitom+")**(3*i)",(2,3,1),3*4)
+#sound = sounda+soundb
 
 stemp2 = [(i+j)*.5 for i,j in zip(sounda,soundb)]
 stemp3 = [(i+j)*.5 for i,j in zip(stemp,stemp2)]
