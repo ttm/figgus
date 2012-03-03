@@ -26,7 +26,7 @@ sound=[]
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=200 * (2**((3*i)/12.)) # terca menor por grao
     s.ordered_unit_grains[i].duration=.2 + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 #s.ordered_unit_grains[1].freq=100
 #s.ordered_unit_grains[3].freq=500
@@ -41,7 +41,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500
@@ -56,7 +56,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.05*i#.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500
@@ -72,7 +72,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.1#.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500
@@ -89,7 +89,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.2 + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
@@ -104,7 +104,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
@@ -119,7 +119,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.01*i**2#.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
@@ -135,7 +135,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.1#.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
@@ -153,7 +153,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.2 + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500/2
@@ -168,7 +168,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500/2
@@ -183,7 +183,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.2*i#.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500/2
@@ -199,7 +199,7 @@ sound+=p.sonic_vector
 for i in xrange(n):
     s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
     s.ordered_unit_grains[i].duration=.1*i#.2# + 0.05*i
-    print 100*(i+1)
+    #print 100*(i+1)
     
 s.ordered_unit_grains[1].freq=100
 s.ordered_unit_grains[3].freq=500/2
@@ -218,4 +218,4 @@ sound+=p.sonic_vector
 io=f.IOUtils()
 io.recordFile(sound)
 
-print "== Ouca que 'o triangulo gira e existe uma bola do lado' (nome da peca) =="
+#print "== Ouca que 'o triangulo gira e existe uma bola do lado' (nome da peca) =="

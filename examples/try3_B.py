@@ -27,7 +27,7 @@ def doCompass(durs,freqs,perms,ncomps):
     for i in xrange(n):
 	s.ordered_unit_grains[i].freq=eval(freqs)
 	s.ordered_unit_grains[i].duration=eval(durs)
-	print 1*(i+1)
+	#print 1*(i+1)
 	
     #s.ordered_unit_grains[1].freq=100
     #s.ordered_unit_grains[3].freq=500

@@ -8,7 +8,7 @@ def doCompass(durs,freqs,perms,ncomps):
     for i in xrange(n):
 	s.ordered_unit_grains[i].freq=eval(freqs)
 	s.ordered_unit_grains[i].duration=eval(durs)
-	print 1*(i+1)
+	#print 1*(i+1)
 
     p=f.Pattern(s,f.PermutationPattern(),ncomps)
     p.synthesizeSonicVectors()

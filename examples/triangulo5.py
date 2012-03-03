@@ -8,7 +8,7 @@ def doCompass(durs,freqs,perms,ncomps,ss):
     for i in xrange(n):
 	s.ordered_unit_grains[i].freq=eval(freqs)
 	s.ordered_unit_grains[i].duration=eval(durs)
-	print 1*(i+1)
+	#print 1*(i+1)
 
     p=f.Pattern(s,f.PermutationPattern(perms),ncomps)
     p.synthesizeSonicVectors()
@@ -57,7 +57,7 @@ sound+=sounde
 io=f.IOUtils()
 io.recordFile(sound) #records a mono 16 bit
 
-print "\n== triangulo gira em crescente ==\n"
+#print "\n== triangulo gira em crescente ==\n"
 
 #
 # 123
