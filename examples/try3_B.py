@@ -25,8 +25,8 @@ sound=[]
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
 def doCompass(durs,freqs,perms,ncomps):
     for i in xrange(n):
-	s.ordered_unit_grains[i].freq=eval(freqs)
-	s.ordered_unit_grains[i].duration=eval(durs)
+	s.ordered_units[i].freq=eval(freqs)
+	s.ordered_units[i].duration=eval(durs)
 	#print 1*(i+1)
 	
     #s.ordered_unit_grains[1].freq=100

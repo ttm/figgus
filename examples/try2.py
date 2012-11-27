@@ -24,12 +24,12 @@ sound=[]
 
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.2 + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.2 + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -39,12 +39,12 @@ sound+=p.sonic_vector
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -54,12 +54,12 @@ sound+=p.sonic_vector
 
 # COMPASS 9-12 *.*.*.*.*.*.*.*.*.*.*.*.* 3
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.05*i#.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.05*i#.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -70,12 +70,12 @@ sound+=p.sonic_vector
 
 # COMPASS 13-16 *.*.*.*.*.*.*.*.*.*.*.*.* 4
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.1#.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.1#.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -87,12 +87,12 @@ sound+=p.sonic_vector
 ##########
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.2 + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.2 + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
     
 #pp=PermutationPattern()s
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -102,12 +102,12 @@ sound+=p.sonic_vector
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -117,12 +117,12 @@ sound+=p.sonic_vector
 
 # COMPASS 9-12 *.*.*.*.*.*.*.*.*.*.*.*.* 3
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.01*i**2#.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.01*i**2#.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -133,12 +133,12 @@ sound+=p.sonic_vector
 
 # COMPASS 13-16 *.*.*.*.*.*.*.*.*.*.*.*.* 4
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.1#.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.1#.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500*3./2 ### Uma quinta a cima o pedal/bola
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),4)
@@ -151,12 +151,12 @@ sound+=p.sonic_vector
 
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.2 + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.2 + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500/2
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500/2
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -166,12 +166,12 @@ sound+=p.sonic_vector
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500/2
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500/2
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -181,12 +181,12 @@ sound+=p.sonic_vector
 
 # COMPASS 9-12 *.*.*.*.*.*.*.*.*.*.*.*.* 3
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.2*i#.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.2*i#.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500/2
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500/2
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -197,12 +197,12 @@ sound+=p.sonic_vector
 
 # COMPASS 13-16 *.*.*.*.*.*.*.*.*.*.*.*.* 4
 for i in xrange(n):
-    s.ordered_unit_grains[i].freq=10000 - 1000*(i+1)
-    s.ordered_unit_grains[i].duration=.1*i#.2# + 0.05*i
+    s.ordered_units[i].freq=10000 - 1000*(i+1)
+    s.ordered_units[i].duration=.1*i#.2# + 0.05*i
     #print 100*(i+1)
     
-s.ordered_unit_grains[1].freq=100
-s.ordered_unit_grains[3].freq=500/2
+s.ordered_units[1].freq=100
+s.ordered_units[3].freq=500/2
     
 #pp=PermutationPattern()
 p=f.Pattern(s,f.PermutationPattern(),8)
@@ -218,4 +218,4 @@ sound+=p.sonic_vector
 io=f.IOUtils()
 io.recordFile(sound)
 
-#print "== Ouca que 'o triangulo gira e existe uma bola do lado' (nome da peca) =="
+print("== Ouca que 'o triangulo gira e existe uma bola do lado' (nome da peca) ==")

@@ -6,8 +6,8 @@ s=f.Sequence(grains)
 
 def doCompass(durs,freqs,perms,ncomps):
     for i in xrange(n):
-	s.ordered_unit_grains[i].freq=eval(freqs)
-	s.ordered_unit_grains[i].duration=eval(durs)
+	s.ordered_units[i].freq=eval(freqs)
+	s.ordered_units[i].duration=eval(durs)
 	#print 1*(i+1)
 
     p=f.Pattern(s,f.PermutationPattern(),ncomps)
