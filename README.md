@@ -1,18 +1,22 @@
-== FIGGS: Finite Groups in Granular and Unit Synthesis ==
+# FIGGS: Finite Groups in Granular and Unit Synthesis
 
-This is the rewriting of the old 'FIGGS': Finite Groups in Granular and Unit Synthesis
+This is a rewriting of the old 'FIGGS': Finite Groups in Granular and Unit Synthesis.
 
-Install it with the usual 'python setup.py install'
+Install it with the usual:
+  $ python3 setup.py install
+
+Make the PPEPPS musical pieces running the script:
+  $ python3 runme_make_ep.py
 
 See files and TODO for now, or write us:
-labmacambira@teia.org.br
+labmacambira@googlegroups.com
 renato.fabbri@gmail.com
 
-Or try our IRC:
+Or try the IRC channel:
 #labmacambira @ irc.freenode.net
 
 
-------
+### notes
 For now, FIGGUS is structured as follows:
 
 1) Sonic Material
@@ -31,8 +35,8 @@ class Tables (in tables.py) reads tables for lookup from directory tables/
 class IOUtils is dedicated to easy pattern and vectors IOs
 
 some more elaborated Finite Group stuff should come soon, probrably via gap.
-############
-# USAGE:
+
+### usage:
 import figgus as f
 
 p=f.Pattern() # Pattern uses standard 1s 220Hz sonic units and (123) == [231] permutations
@@ -42,10 +46,8 @@ io=f.IOUtils() # instantiates a IO class
 io.recordPattern("som.wav",p) # Make .wav from pattern p please :-)
 
 
-"""
-FIGGS ancient code:
+### FIGGS/FIGGUS ancient code:
 http://www.estudiolivre.org/el-gallery_view.php?arquivoId=7959
-"""
 
 
 === /\/\/\/\/\ _o_o_ oOo _o_o_ /\/\/\/\/\ ===

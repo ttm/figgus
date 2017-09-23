@@ -68,14 +68,14 @@ class Pattern:
         self.permutation_pattern=permutation_pattern
         
         self.tail=sequence.n_units - permutation_pattern.size
-        if sequence.n_units> permutation_pattern.size:
+        if sequence.n_units > permutation_pattern.size:
             self.tail_elements = range(permutation_pattern.size,sequence.n_units)
         else:
             self.tail_elements = []
             
         pattern=[sequence.active_grains]
         stage=sequence.active_grains
-        for i in xrange(iterations-1):
+        for i in range(iterations-1):
             if i%permutation_pattern.period == 0:
                 stage = [stage[j-1] for j in permutation_pattern.one_line]
                 stage += self.tail_elements
