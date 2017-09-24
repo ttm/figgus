@@ -1,6 +1,6 @@
 ###### THE BASIC SEQUENCE: ######
 
-from tables import *
+from .tables import *
 
 class UnitGrain:
     """Sonic minimum unit, be it a grain or a note
@@ -98,7 +98,7 @@ class Pattern:
             for unit in units:
                 SI= unit.freq * self.N / self.SR
                 ap=0
-                for i in xrange(int(unit.duration*self.SR)):
+                for i in range(int(unit.duration*self.SR)):
                     sonic_vector.append(unit.intensidade*Tables.sin1024[int(ap)])
                     ap = (SI + ap)%self.N
         self.sonic_vector=sonic_vector
@@ -133,7 +133,7 @@ class IOUtils:
             SV=[]
             for i,j in zip(sonic_vector,sonic_vector2):
                 SV.extend((i,j))
-            sound.writeframes(struct.pack('h'*len(SV),*SV))
+            sound.writeframes(struct.pack('h'*len(SV),*[int(i) for i in SV]))
             sound.close()
 
 

@@ -23,7 +23,7 @@ s=f.Sequence(grains)
 sound=[]
 
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.2 + 0.05*i
     #print 100*(i+1)
@@ -38,7 +38,7 @@ sound+=p.sonic_vector
 
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.2# + 0.05*i
     #print 100*(i+1)
@@ -53,7 +53,7 @@ sound+=p.sonic_vector
 
 
 # COMPASS 9-12 *.*.*.*.*.*.*.*.*.*.*.*.* 3
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.05*i#.2# + 0.05*i
     #print 100*(i+1)
@@ -69,7 +69,7 @@ sound+=p.sonic_vector
 ###################
 
 # COMPASS 13-16 *.*.*.*.*.*.*.*.*.*.*.*.* 4
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.1#.2# + 0.05*i
     #print 100*(i+1)
@@ -86,7 +86,7 @@ sound+=p.sonic_vector
 ##########
 ##########
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.2 + 0.05*i
     #print 100*(i+1)
@@ -101,7 +101,7 @@ sound+=p.sonic_vector
 
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.2# + 0.05*i
     #print 100*(i+1)
@@ -116,7 +116,7 @@ sound+=p.sonic_vector
 
 
 # COMPASS 9-12 *.*.*.*.*.*.*.*.*.*.*.*.* 3
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.01*i**2#.2# + 0.05*i
     #print 100*(i+1)
@@ -132,7 +132,7 @@ sound+=p.sonic_vector
 ###################
 
 # COMPASS 13-16 *.*.*.*.*.*.*.*.*.*.*.*.* 4
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.1#.2# + 0.05*i
     #print 100*(i+1)
@@ -150,7 +150,7 @@ sound+=p.sonic_vector
 ######### 4 compass de 4 ::: 2
 
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.2 + 0.05*i
     #print 100*(i+1)
@@ -165,7 +165,7 @@ sound+=p.sonic_vector
 
 
 # COMPASS 5-8 *.*.*.*.*.*.*.*.*.*.*.*.* 2
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.2# + 0.05*i
     #print 100*(i+1)
@@ -180,7 +180,7 @@ sound+=p.sonic_vector
 
 
 # COMPASS 9-12 *.*.*.*.*.*.*.*.*.*.*.*.* 3
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.2*i#.2# + 0.05*i
     #print 100*(i+1)
@@ -196,7 +196,7 @@ sound+=p.sonic_vector
 ###################
 
 # COMPASS 13-16 *.*.*.*.*.*.*.*.*.*.*.*.* 4
-for i in xrange(n):
+for i in range(n):
     s.ordered_units[i].freq=10000 - 1000*(i+1)
     s.ordered_units[i].duration=.1*i#.2# + 0.05*i
     #print 100*(i+1)

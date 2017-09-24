@@ -1,1 +1,1 @@
-from FIGGUS import *
+from .FIGGUS import *

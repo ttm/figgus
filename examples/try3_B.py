@@ -24,15 +24,11 @@ sound=[]
 
 # COMPASS 1-4 *.*.*.*.*.*.*.*.*.*.*.*.* 1
 def doCompass(durs,freqs,perms,ncomps):
-    for i in xrange(n):
-	s.ordered_units[i].freq=eval(freqs)
-	s.ordered_units[i].duration=eval(durs)
-	#print 1*(i+1)
+    global n, s, f
+    for i in range(n):
+        s.ordered_units[i].freq=eval(freqs)
+        s.ordered_units[i].duration=eval(durs)
 	
-    #s.ordered_unit_grains[1].freq=100
-    #s.ordered_unit_grains[3].freq=500
-	
-    #pp=PermutationPattern()
     p=f.Pattern(s,f.PermutationPattern(),ncomps)
     p.synthesizeSonicVectors()
     return p.sonic_vector

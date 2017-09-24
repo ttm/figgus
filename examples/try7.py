@@ -5,10 +5,9 @@ grains=[f.UnitGrain(),f.UnitGrain(),f.UnitGrain(),f.UnitGrain()]
 s=f.Sequence(grains)
 
 def doCompass(durs,freqs,perms,ncomps):
-    for i in xrange(n):
-	s.ordered_units[i].freq=eval(freqs)
-	s.ordered_units[i].duration=eval(durs)
-	#print 1*(i+1)
+    for i in range(n):
+        s.ordered_units[i].freq=eval(freqs)
+        s.ordered_units[i].duration=eval(durs)
 
     p=f.Pattern(s,f.PermutationPattern(perms),ncomps)
     p.synthesizeSonicVectors()
@@ -56,23 +55,23 @@ right+=left3
 #####====
 
 L=len(sound2)
-left33= sound2[:L/3]+sound2B[L/3:2*L/3]+sound2C[2*L/3:] # Sobe
-right33=sound2C[:L/3]+sound2[L/3:2*L/3]+sound2B[2*L/3:] # Desce
+left33= sound2[:L//3]+sound2B[L//3:2*L//3]+sound2C[2*L//3:] # Sobe
+right33=sound2C[:L//3]+sound2[L//3:2*L//3]+sound2B[2*L//3:] # Desce
 left+=left33+right33
 right+=right33+left33
 
-left4= sound1[:L/3]+sound1C[L/3:2*L/3]+sound1B[2*L/3:] # Sobe
-right4=sound1B[:L/3]+sound1[L/3:2*L/3]+sound1C[2*L/3:] # Sobe
+left4= sound1[:L//3]+sound1C[L//3:2*L//3]+sound1B[2*L//3:] # Sobe
+right4=sound1B[:L//3]+sound1[L//3:2*L//3]+sound1C[2*L//3:] # Sobe
 left+=(left4+right4)            *                  2 
 right+=(right4+left4)           *                  2
 
-left5= sound1[:L/3]+sound1B[L/3:2*L/3]+sound1C[2*L/3:] # Desce
-right5=sound1B[:L/3]+sound1C[L/3:2*L/3]+sound1[2*L/3:] # Desce
+left5= sound1[:L//3]+sound1B[L//3:2*L//3]+sound1C[2*L//3:] # Desce
+right5=sound1B[:L//3]+sound1C[L//3:2*L//3]+sound1[2*L//3:] # Desce
 left+=(left5+right5)            *                  2
 right+=(right5+left5)           *                  2
 
-left6= sound2[:L/3]+sound2B[L/3:2*L/3]+sound2C[2*L/3:] # Desce
-right6=sound2C[:L/3]+sound2B[L/3:2*L/3]+sound2[2*L/3:] # Sobe
+left6= sound2[:L//3]+sound2B[L//3:2*L//3]+sound2C[2*L//3:] # Desce
+right6=sound2C[:L//3]+sound2B[L//3:2*L//3]+sound2[2*L//3:] # Sobe
 left+=left6+right6
 right+=right6+left6
 

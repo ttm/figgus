@@ -5,10 +5,9 @@ grains=[f.UnitGrain(),f.UnitGrain(),f.UnitGrain(),f.UnitGrain()]
 s=f.Sequence(grains)
 
 def doCompass(durs,freqs,perms,ncomps):
-    for i in xrange(n):
-	s.ordered_units[i].freq=eval(freqs)
-	s.ordered_units[i].duration=eval(durs)
-	#print 1*(i+1)
+    for i in range(n):
+        s.ordered_units[i].freq=eval(freqs)
+        s.ordered_units[i].duration=eval(durs)
 
     p=f.Pattern(s,f.PermutationPattern(perms),ncomps)
     p.synthesizeSonicVectors()
