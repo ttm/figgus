@@ -1,7 +1,7 @@
 import os
 
 def exec_(fname):
-    exec(open(fname).read())
+    os.system("python3 "+fname)
 
 if not os.path.isdir('ep-Projeto_Solvente'):
     os.mkdir('ep-Projeto_Solvente')
